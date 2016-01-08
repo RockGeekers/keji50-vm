@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+#html("/static/js/require.js")
+    #head()
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>$title #if( $titleAffix ) - $titleAffix#end</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico" />
+        <!--[if lt IE 9]>
+            <script src="/static/js/html5shiv.min.js"></script>
+            <script src="/static/js/respond.min.js"></script>
+        <![endif]-->
+        #require("/static/scss/reset.css")
+        #require("jquery")
+    #end
+    #body()
+        <div id="wrapper">
+            #block("body")
+            #end
+        </div>
+    #end
+    ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+    #require("./frame.vm")
+    <script>
+    var loginInfo;
+    window.onload = function(){
+        loginInfo = window.frames['login'].document.body.innerHTML ;
+        loginInfo = loginInfo && eval('(' + loginInfo + ')');
+        var unlogin = document.getElementById('J_unlogin'),
+            logined = document.getElementById('J_logined');
+        if(loginInfo){
+            if(loginInfo.isUserLogin){
+                unlogin.style.display = 'none';
+                document.getElementById('loginUser').innerHTML = loginInfo.nickName
+                logined.style.display = 'inline';
+            }else{
+                unlogin.style.display = 'inline';
+                logined.style.display = 'none';
+            }
+        }
+        window.loginInfo = loginInfo;
+    };
+    </script>
+    <iframe style="display:none;" id="loginFrame" name="login" src="$keji50_domain/common/login-user.jsp" width="100%" />  
+#end## end of html

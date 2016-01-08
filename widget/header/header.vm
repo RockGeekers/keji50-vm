@@ -1,0 +1,25 @@
+<div class="top ss" id="header">
+    <div class="topBox">
+        <div class="topLink_1">
+            <a class="logo" href="$keji50_domain"><img src="./images/logo.png"/></a>
+            <a class="selected" href="$rc.getContextPath()">资讯</a>
+            <a href="$keji50_domain/web?command=ListNews">创业活动</a>
+            <a href="$keji50_domain/web?command=ListPro">项目展示</a>
+            <a href="$keji50_domain/web?command=ListTutor">导师</a>
+            <a href="$keji50_domain/web?command=ListMade">创富集</a>
+            <a href="http://www.zhucexia.com" target="_blank">创业服务</a>
+            <a href="$keji50_domain/web?command=MadeHelp">关于我们</a>
+        </div>
+        <div class="topLink_2 fr">
+            <div id="J_unlogin">
+                <a href="$keji50_domain/web?command=Login" class="ico-user">登录</a>
+                <a href="$keji50_domain/web?command=Register">注册</a>
+            </div>
+            <div id="J_logined" style="display:none;">
+                <a href="javascript:;" id="loginUser" class="ico-user"></a>  
+                <a href="$keji50_domain/web?command=Logout">退出</a> 
+            </div>
+            <a href="$keji50_domain/web?command=Release_pro" class="ico-edit">发布项目</a>
+        </div>
+    </div>
+</div>

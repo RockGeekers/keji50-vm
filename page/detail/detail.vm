@@ -1,0 +1,19 @@
+#extends("/page/layout/front/front.vm")
+#require("./detail.css")
+#block("content")
+<div class="article-detail-wrap">
+        <div class="main-section">
+			#widget("/widget/detail/detail.vm")
+			
+            <div class="article-side">
+				#widget("/widget/author/author.vm")
+				#widget("/widget/hottest/hottest.vm")
+				#widget("/widget/advertise/advertise.vm")
+            </div>
+        </div>
+    </div>
+#end## end of body
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+#require("./index.vm")
+#end
