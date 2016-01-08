@@ -32,7 +32,7 @@ fis.config.set('settings.parser.sass.include_paths', [
 fis.config.set('modules.packager', 'depscombine');
 fis.config.merge({
     roadmap: {
-        domain: '/info'
+        domain: ''
     },
     deploy : {
         //使用fis release --dest remote来使用这个配置
@@ -58,7 +58,7 @@ fis.config.merge({
         local : {
             //from参数省略，表示从发布后的根目录开始上传
             //发布到当前项目的上一级的output目录中
-            to : '../keji50-info/src/main/webapp'
+            to : '../keji50/src/main/webapp'
         },
         //也可以是一个数组
         remote2 : [
