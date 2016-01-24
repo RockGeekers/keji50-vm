@@ -1,47 +1,49 @@
 #extends("/page/layout/front/front.vm")
-#require("../index/index.css")
-#require("../author/author.css")
+#require("./base.css")
 #block("content")
+<div class="index-bg">
+</div>
 <div class="container">
     <div class="login-left">
         <div class="ele-1"></div>
-        <a href="https://z.36kr.com/zhongchouPullNew?krsrc=zhucedenglu" target="_blank">立即参与</a>
+        <a href="#" target="_blank">立即参与</a>
     </div>
-    <!-- uiView:  -->
     <div class="form-wrapper ng-scope" ui-view="">
-        <form action="" method="post" role="form" name="LoginForm" class="form common-form ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-parse" ng-class="{&#39;common-wide-form&#39;:!!bindType}" ng-submit="submitLoginForm($event)">
-            <legend ng-if="!bindType" class="ng-scope">
+        <form action="" method="post" role="form" id="loginForm" name="LoginForm" class="form common-form">
+            <legend class="ng-scope">
                 <h2>账号密码登录</h2>
             </legend>
             <div class="reg-entry">
-                <!-- ngIf: !bindType --><a ui-sref="register({type: bindType})" ng-if="!bindType" class="ng-scope" href="https://passport.36kr.com/pages/#/register">注册新用户</a>
-                <!-- end ngIf: !bindType -->
-                <!-- ngIf: bindType=='bind' -->
+                <a class="ng-scope" href="https://passport.36kr.com/pages/#/register">注册新用户</a>
             </div>
-            <!-- ngIf: remoteError -->
-            <!-- ngIf: showSetPasswordTip -->
+            <div class="error-wrapper" style="display:none" id="J_errorwrap">
+                <i></i>
+                <div class="error">
+                    <span class="error-msg"></span><!-- end ngIf: remoteError -->
+                </div>
+            </div>
             <div class="form-group">
                 <label class="icon-person"></label>
-                <input type="text" class="form-control ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" name="username" ng-model="formData.username" placeholder="手机号/邮箱" required="">
+                <input type="text" class="form-control" name="username" placeholder="手机号/邮箱" required="">
             </div>
             <div class="form-group">
                 <label class="icon-lock"></label>
-                <input type="password" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" name="password" ng-model="formData.password" placeholder="密码" required="">
+                <input type="password" class="form-control" name="password" placeholder="密码" required="">
             </div>
-            <!-- ngIf: formData.needCaptcha -->
             <div class="form-group">
                 <a ui-sref="forget" target="_blank" href="https://passport.36kr.com/pages/#/forget">忘记登录密码</a>
             </div>
-            <button type="submit" ng-click="submitLoginForm($event)" class="btn btn-primary">立即登录</button>
+            <button type="button" id="J_submit" class="btn btn-primary">立即登录</button>
+
         </form>
         <!--使用第三方账号绑定-->
         <!-- ngIf: !bindType -->
         <div class="networks ng-scope" ng-if="!bindType">
             <h3>社交网络登录</h3>
             <div class="items">
-                <a class="item icon-qq" href="javascript:void(0)" ng-click="loginWithNetwork(&#39;qq&#39;)" title="QQ"></a>
-                <a class="item icon-wechat" href="javascript:void(0)" ng-click="loginWithNetwork(&#39;weixin&#39;)" title="微信"></a>
-                <a class="item icon-weibo" href="javascript:void(0)" ng-click="loginWithNetwork(&#39;weibo&#39;)" title="微博"></a>
+                <a class="item icon-qq" href="javascript:void(0)" title="QQ"></a>
+                <a class="item icon-wechat" href="javascript:void(0)" title="微信"></a>
+                <a class="item icon-weibo" href="javascript:void(0)" title="微博"></a>
             </div>
         </div>
     </div>
@@ -49,5 +51,10 @@
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+
+
+#script()
+    require(['./login']);
+#end
 #require("./login.vm")
 #end
