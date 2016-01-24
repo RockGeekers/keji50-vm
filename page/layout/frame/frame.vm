@@ -40,5 +40,4 @@
         window.loginInfo = loginInfo;
     };
     </script>
-    <iframe style="display:none;" id="loginFrame" name="login" src="$keji50_domain/common/login-user.jsp" width="100%" />  
 #end## end of html

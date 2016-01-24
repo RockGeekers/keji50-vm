@@ -59,7 +59,7 @@
                     </div>
                     <div style="clear:both"></div>
                     <div class="bottom J_requirelogin">
-                        <div class="meta left cf"><a class="login_before_comment" href="$keji50_domain/web?command=Login">登录</a>后参与讨论</div>
+                        <div class="meta left cf"><a class="login_before_comment" href="$rc.getContextPath()/account/sign_in">登录</a>后参与讨论</div>
                     </div>
                 </div>
                 <hr>

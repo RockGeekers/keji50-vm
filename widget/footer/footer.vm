@@ -33,11 +33,11 @@
 <div class="bottom">
 	<div class="bottomBox">
 		<span>
-			<a href="$keji50_domain/web?command=Index">首页</a>
-			<a href="$keji50_domain/web?command=ListPro">项目</a>
-			<a href="$keji50_domain/web?command=ListNews">活动</a>
-			<a href="$keji50_domain/web?command=ListTutor">导师</a>
-			<a href="$keji50_domain/web?command=ListMade">创富集</a>
+			<a href="$rc.getContextPath()">首页</a>
+			<a href="/web?command=ListPro">项目</a>
+			<a href="/web?command=ListNews">活动</a>
+			<a href="/web?command=ListTutor">导师</a>
+			<a href="/web?command=ListMade">创富集</a>
 			<a href="http://weibo.com/u/2934813712" target="_blank">官方微博</a>
 		</span>
 		<i> &copy;2014 领头羊信息科技有限公司 版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备14008120号-1</a></i>
