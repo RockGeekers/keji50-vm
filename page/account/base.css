@@ -8750,7 +8750,7 @@ only screen and (min-device-pixel-ratio:1.5) {
     left: 0;
     bottom: 404px;
     right: 0;
-    background: url(/static/images/login-bg.jpg) center bottom no-repeat #008b8b;
+    background: url(/static/images/login-bg.jpg) center bottom no-repeat #BDB76B;
     overflow: hidden
 }
 
