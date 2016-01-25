@@ -11,6 +11,7 @@ $('#J_submit').click(function(){
 	return false;
 });
 $("#J_regsub").click(function() {
+	$('#J_errorwrap').hide();
 	$.post('/account/ajax/sign_up', $('#regForm').serialize(), function(data) {
 		if(data.code == 0){
 			location.href = '#'
@@ -19,4 +20,26 @@ $("#J_regsub").click(function() {
 		}
 	});
 	return false;
+});
+$("#J_reset").click(function() {
+	$('#J_errorwrap').hide();
+	$.post('/account/ajax/forget_reset', $('#forgetForm').serialize(), function(data) {
+		if (data.code == 0) {
+			$('#J_errorwrap').show().find('.error-msg').text('密码重置成功， 请重新登录');
+		} else {
+			$('#J_errorwrap').show().find('.error-msg').text(data.message);
+		}
+	});
+});
+$("#J_sendsms").click(function() {
+	var username = $("#username").val();
+	if (username) {
+		$.post('/account/ajax/send_code', {'username' : username}, function(data) {
+			if (data.code == 0) {
+				$("#verifyId").val(data.data);
+			} else {
+				$('#J_errorwrap').show().find('.error-msg').text(data.message);
+			}
+		});
+	}
 });

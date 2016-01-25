@@ -8813,8 +8813,8 @@ only screen and (min-device-pixel-ratio:1.5) {
 
 .container .login-left .ele-1 {
     width: 393px;
-    height: 380px;
-    background: url(/static/images/login-ele1.png) center center no-repeat
+    height: 320px;
+    background: url(/static/images/login-ele1.jpg) center center no-repeat
 }
 
 .container .login-left a {

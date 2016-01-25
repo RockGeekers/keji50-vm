@@ -36,16 +36,6 @@
             <button type="button" id="J_submit" class="btn btn-primary">立即登录</button>
 
         </form>
-        <!--使用第三方账号绑定-->
-        <!-- ngIf: !bindType -->
-        <div class="networks ng-scope" ng-if="!bindType">
-            <h3>社交网络登录</h3>
-            <div class="items">
-                <a class="item icon-qq" href="javascript:void(0)" title="QQ"></a>
-                <a class="item icon-wechat" href="javascript:void(0)" title="微信"></a>
-                <a class="item icon-weibo" href="javascript:void(0)" title="微博"></a>
-            </div>
-        </div>
     </div>
 </div>
 #end## end of body

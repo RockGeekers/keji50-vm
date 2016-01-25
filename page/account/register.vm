@@ -10,11 +10,17 @@
         <div class="bind-entry ng-scope" ng-if="bindType!='bind' &amp;&amp; regType!='success'">
             <a ui-sref="index.login()" href="$rc.getContextPath()/account/sign_in">使用已有账号登录</a>
         </div>
+        <div class="error-wrapper" style="display:none" id="J_errorwrap">
+            <i></i>
+            <div class="error">
+                <span class="error-msg"></span><!-- end ngIf: remoteError -->
+            </div>
+        </div>
         <div class="phone ng-scope" ng-if="regType=='phone'">
-            <form action="" method="post" role="form" id="regForm" name="RegisterForm" ng-submit="submitRegForm($event)" class="ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-compare-to">
+            <form action="" method="post" role="form" id="regForm" name="regForm" ng-submit="submitRegForm($event)" class="ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-compare-to">
                 <div class="form-group">
                     <label class="icon-phone"></label>
-                    <input type="tel" class="form-control ng-valid-pattern ng-dirty ng-valid-parse ng-invalid ng-invalid-required ng-touched" name="username" ng-model="formData.username" placeholder="手机号" required="" ng-pattern="/^\d+$/">
+                    <input type="tel" class="form-control ng-valid-pattern ng-dirty ng-valid-parse ng-invalid ng-invalid-required ng-touched" name="username" id="username" ng-model="formData.username" placeholder="手机号" required="" ng-pattern="/^\d+$/">
                     <div class="error ng-scope">
                         <span class="ng-scope">请输入手机号</span>
                     </div>
@@ -33,9 +39,10 @@ s                </div>
                 <div class="form-group">
                     <label class="icon-eye"></label>
                     <div class="actions col-actions ng-scope" ng-if="countLeft<=0 || !countLeft">
-                        <a href="javascript:void(0)" class="icon-envelop btn" title="短信" ng-disabled="RegisterForm.username.$invalid" ng-click="RegisterForm.username.$invalid || sendSMS()" disabled="disabled"></a>
+                        <a id="J_sendsms" class="icon-envelop btn" title="短信" ng-disabled="RegisterForm.username.$invalid" ng-click="RegisterForm.username.$invalid || sendSMS()"></a>
                     </div>
                     <div class="col-input">
+                    	<input type="hidden"  name="verifyId"  id="verifyId">
                         <input type="text" class="form-control col-9 ng-pristine ng-invalid ng-invalid-required ng-touched" name="verifyCode" ng-model="formData.verifyCode" id="" placeholder="验证码" required="">
                     </div>
                 </div>
