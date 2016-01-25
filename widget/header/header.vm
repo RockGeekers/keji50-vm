@@ -2,7 +2,7 @@
     <div class="topBox">
         <div class="topLink_1">
             <a class="logo" href="/"><img src="./images/logo.png"/></a>
-            <a class="selected" href="/">资讯</a>
+            <a #if($index == 'info') class="selected" #end href="/">资讯</a>
             <a href="/web?command=ListNews">创业活动</a>
             <a href="/web?command=ListPro">项目展示</a>
             <a href="/web?command=ListTutor">导师</a>
@@ -18,8 +18,8 @@
                 </div>
             #else
                 <div id="J_unlogin">
-                    <a href="$rc.getContextPath()/account/sign_in" class="ico-user">登录</a>
-                    <a href="$rc.getContextPath()/account/sign_up">注册</a>
+                    <a href="$rc.getContextPath()/account/sign_in"  class="ico-user">登录</a>
+                    <a href="$rc.getContextPath()/account/sign_up" #if($index == 'sign_up')class="selected"#end >注册</a>
                 </div>
             #end
             <a href="/web?command=Release_pro" class="ico-edit">发布项目</a>
