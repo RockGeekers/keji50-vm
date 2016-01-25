@@ -8,7 +8,7 @@
             <!-- end ngIf: bindType!='bind' -->
         </legend>
         <div class="bind-entry ng-scope" ng-if="bindType!='bind' &amp;&amp; regType!='success'">
-            <a ui-sref="index.login()" href="#/login">使用已有账号登录</a>
+            <a ui-sref="index.login()" href="$rc.getContextPath()/account/sign_in">使用已有账号登录</a>
         </div>
         <div class="phone ng-scope" ng-if="regType=='phone'">
             <form action="" method="post" role="form" id="regForm" name="RegisterForm" ng-submit="submitRegForm($event)" class="ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-compare-to">
@@ -40,10 +40,6 @@ s                </div>
                     </div>
                 </div>
                 <button type="button" id="J_regsub" class="btn btn-primary">注册账号</button>
-                <div class="form-group">
-                    <a href="javascript:void(0)" ng-click="changeRegType('email')" class="left">使用邮箱注册</a>
-                    <a href="http://help.36kr.com/passport.html#tab1-1" target="_blank" class="right">我为何收不到验证码</a>
-                </div>
             </form>
         </div>
     </div>

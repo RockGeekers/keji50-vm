@@ -1,8 +1,8 @@
 <div class="top ss" id="header">
     <div class="topBox">
         <div class="topLink_1">
-            <a class="logo" href="$rc.getContextPath()"><img src="./images/logo.png"/></a>
-            <a class="selected" href="$rc.getContextPath()">资讯</a>
+            <a class="logo" href="/"><img src="./images/logo.png"/></a>
+            <a class="selected" href="/">资讯</a>
             <a href="/web?command=ListNews">创业活动</a>
             <a href="/web?command=ListPro">项目展示</a>
             <a href="/web?command=ListTutor">导师</a>
@@ -11,15 +11,15 @@
             <a href="/web?command=MadeHelp">关于我们</a>
         </div>
         <div class="topLink_2 fr">
-            #if( $loginUser == null )
+            #if( $loginUser )
+                <div id="J_logined">
+                    <a href="javascript:;" id="loginUser" class="ico-user">$loginUser.getNickname()</a>  
+                    <a href="$rc.getContextPath()/account/ajax/sign_out">退出</a> 
+                </div>
+            #else
                 <div id="J_unlogin">
                     <a href="$rc.getContextPath()/account/sign_in" class="ico-user">登录</a>
                     <a href="$rc.getContextPath()/account/sign_up">注册</a>
-                </div>
-            #else
-                <div id="J_logined" style="display:none;">
-                    <a href="javascript:;" id="loginUser" class="ico-user">$loginUser.getNickname()</a>  
-                    <a href="$rc.getContextPath()/account/ajax/sign_out">退出</a> 
                 </div>
             #end
             <a href="/web?command=Release_pro" class="ico-edit">发布项目</a>

@@ -3,7 +3,7 @@ $('#J_submit').click(function(){
 	$('#J_errorwrap').hide();
 	$.post('/account/ajax/sign_in', $('#loginForm').serialize(), function(data) {
 		if(data.code == 0){
-			location.href = '#'
+			location.href = '/'
 		}else{
 			$('#J_errorwrap').show().find('.error-msg').text(data.message);
 		}
