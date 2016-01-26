@@ -1,5 +1,5 @@
 var $ = require('jquery');
-$('#J_submit').click(function(){
+$('#J_signin').click(function(){
 	$('#J_errorwrap').hide();
 	$.post('/account/ajax/sign_in', $('#loginForm').serialize(), function(data) {
 		if(data.code == 0){
@@ -10,11 +10,11 @@ $('#J_submit').click(function(){
 	});
 	return false;
 });
-$("#J_regsub").click(function() {
+$("#J_signup").click(function() {
 	$('#J_errorwrap').hide();
 	$.post('/account/ajax/sign_up', $('#regForm').serialize(), function(data) {
 		if(data.code == 0){
-			location.href = '#'
+			location.href = '/'
 		}else{
 			$('#J_errorwrap').show().find('.error-msg').text(data.message);
 		}
@@ -30,6 +30,15 @@ $("#J_reset").click(function() {
 			$('#J_errorwrap').show().find('.error-msg').text(data.message);
 		}
 	});
+	return false;
+});
+$('#J_signout').click(function(){
+	$.post('/account/ajax/sign_out', function(data) {
+		if(data.code == 0){
+			location.href = '/'
+		}
+	});
+	return false;
 });
 $("#J_sendsms").click(function() {
 	var username = $("#username").val();

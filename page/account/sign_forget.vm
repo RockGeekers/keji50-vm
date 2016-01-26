@@ -57,7 +57,7 @@
 
 
 #script()
-    require(['./login']);
+    require(['./account']);
 #end
 #require("./sign_forget.vm")
 #end

@@ -27,5 +27,5 @@
     </div>
 </div>
 #script()
-    require(['./header']);
+    require(['/page/account/account']);
 #end

@@ -33,7 +33,7 @@
             <div class="form-group">
                 <a ui-sref="forget" target="_blank" href="$rc.getContextPath()/account/forget">忘记登录密码</a>
             </div>
-            <button type="button" id="J_submit" class="btn btn-primary">立即登录</button>
+            <button type="button" id="J_signin" class="btn btn-primary">立即登录</button>
 
         </form>
     </div>
@@ -44,7 +44,7 @@
 
 
 #script()
-    require(['./login']);
+    require(['./account']);
 #end
 #require("./sign_in.vm")
 #end

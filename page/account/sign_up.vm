@@ -46,7 +46,7 @@ s                </div>
                         <input type="text" class="form-control col-9 ng-pristine ng-invalid ng-invalid-required ng-touched" name="verifyCode" ng-model="formData.verifyCode" id="" placeholder="验证码" required="">
                     </div>
                 </div>
-                <button type="button" id="J_regsub" class="btn btn-primary">注册账号</button>
+                <button type="button" id="J_signup" class="btn btn-primary">注册账号</button>
             </form>
         </div>
     </div>
@@ -58,7 +58,7 @@ s                </div>
 
 
 #script()
-    require(['./login']);
+    require(['./account']);
 #end
 #require("./sign_up.vm")
 #end
