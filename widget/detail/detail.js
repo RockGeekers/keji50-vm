@@ -6,35 +6,20 @@ var app = module.exports = function(opt){
 			this.commentTemplate = __inline('./detail.tpl');
 			this.addEvent();
 		},
-		addEvent : function(){
-			var _this = this,
-				i = 0
-			var getlogin = setInterval(function(){
-				i++;
-				if(loginInfo || i > 100){
-					if(loginInfo && loginInfo.isUserLogin){
-						$('#J_userInfo').show().find('.avatar').css('backgroundImage','url(' + loginInfo.image + ')');
-						$('#J_loginname').html(loginInfo.nickName);
-						$('.require-login').show();
-						$('.J_requirelogin').hide();
-					}else{
-						$('.require-login').hide();
-						$('.J_requirelogin').show();
+		addEvent : function() {
+			var _this = this;
+			console.log(opt.author_id);
+			_this.getList(opt.commentUrl,{
+				author_id : opt.author_id
+			},'get',function(data){
+				if(data.code == 0){
+					if(data.data.length){
+						$('#commentTotalCount,#commentFormCount').html(data.data.length);
+						var result = Template.parse(_this.commentTemplate,{data:data});
+						$('#J_comments').html(result);
 					}
-					_this.getList(opt.commentUrl,{
-						author_id : loginInfo ? loginInfo.id : 0
-					},'get',function(data){
-						if(data.code == 0){
-							if(data.data.length){
-								$('#commentTotalCount,#commentFormCount').html(data.data.length);
-								var result = Template.parse(_this.commentTemplate,{data:data});
-								$('#J_comments').html(result);
-							}
-						}
-					});
-					clearInterval(getlogin);
 				}
-			},200);
+			});
 			
 			$('#J_comments').delegate('.pull-right','click',function(){
 				var dataAuthor = $(this).attr('data-author')
@@ -46,7 +31,7 @@ var app = module.exports = function(opt){
 				var content = $('#post').val();
 				if(content){
 					_this.postComment(opt.postUrl ,{
-						author_id : loginInfo.id,
+						author_id : opt.author_id,
 						to_author : $('#post').attr('data-author'),
 						content : content
 					},function(data){
