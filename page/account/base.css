@@ -3755,7 +3755,7 @@ fieldset[disabled] .btn-default:hover {
 
 .btn-primary {
     color: #fff;
-    background-color: #008df3;
+    background-color: #00CD66;
     border-color: transparent
 }
 
@@ -3802,12 +3802,12 @@ fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
-    background-color: #008df3;
+    background-color: #00CD66;
     border-color: transparent
 }
 
 .btn-primary .badge {
-    color: #008df3;
+    color: #00CD66;
     background-color: #fff
 }
 
@@ -8002,7 +8002,7 @@ body * {
 }
 
 body a {
-    color: #008df3
+    color: #00CD66
 }
 
 body a:active,
@@ -8068,7 +8068,7 @@ body .tip-wrapper .tip {
 }
 
 body .tip-wrapper .tip .mail {
-    color: #008df3
+    color: #00CD66
 }
 
 body .common-form {
@@ -8088,7 +8088,7 @@ body .common-form legend h2 {
     font-weight: 600;
     margin: 0 0 -1px;
     line-height: 38px;
-    border-bottom: solid 3px #008df3;
+    border-bottom: solid 3px #00CD66;
     display: inline-block
 }
 
@@ -8198,8 +8198,8 @@ body .common-form .form-group .bubble:before {
 }
 
 body .common-form .btn-default {
-    color: #008df3;
-    border-color: #008df3
+    color: #00CD66;
+    border-color: #00CD66
 }
 
 body .common-form .normal-tip {
@@ -8213,7 +8213,7 @@ body .common-form .normal-tip p {
 }
 
 body .common-form .normal-tip .mail {
-    color: #008df3
+    color: #00CD66
 }
 
 body .common-form .col-input {
@@ -8228,7 +8228,7 @@ body .common-form .col-actions {
 body .common-form .col-actions>a {
     width: 50px;
     height: 50px;
-    background: #008df3;
+    background: #00CD66;
     color: #fff;
     text-align: center;
     line-height: 50px;
@@ -8403,7 +8403,7 @@ body .common-wide-form.success-pages-guide .header-success .inner p:before {
 }
 
 body .common-wide-form.success-pages-guide .a-btn {
-    background-color: #008df3;
+    background-color: #00CD66;
     line-height: 40px;
     color: #fff;
     border-radius: 2px;
@@ -8509,7 +8509,7 @@ body .common-wide-form.success-pages-guide .footer-success h2 {
 body .common-wide-form.success-pages-guide .footer-success h2 span {
     display: inline-block;
     line-height: 45px;
-    border-bottom: 3px solid #008df3;
+    border-bottom: 3px solid #00CD66;
     margin-bottom: -2px
 }
 
@@ -8750,7 +8750,7 @@ only screen and (min-device-pixel-ratio:1.5) {
     left: 0;
     bottom: 404px;
     right: 0;
-    background: url(/static/images/login-bg.jpg) center bottom no-repeat #BDB76B;
+    background: url(/static/images/login-bg.jpg) center bottom no-repeat #00CD66;
     overflow: hidden
 }
 
@@ -8870,14 +8870,14 @@ only screen and (min-device-pixel-ratio:1.5) {
     height: 48px;
     border-radius: 50%;
     margin: 0 6%;
-    border: 2px solid #008df3;
+    border: 2px solid #00CD66;
     display: inline-block;
     line-height: 43px;
     font-size: 20px
 }
 
 .container .networks a.item:hover {
-    background: #008df3;
+    background: #00CD66;
     color: #fff
 }
 
@@ -8963,7 +8963,7 @@ only screen and (min-device-pixel-ratio:1.5) {
 
 .modal .modal-footer .angular-notification-btn-ok {
     color: #fff;
-    background-color: #008df3;
+    background-color: #00CD66;
     border-color: transparent
 }
 
@@ -9010,12 +9010,12 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-ok.focus,
 fieldset[disabled] .modal .modal-footer .angular-notification-btn-ok:active,
 fieldset[disabled] .modal .modal-footer .angular-notification-btn-ok:focus,
 fieldset[disabled] .modal .modal-footer .angular-notification-btn-ok:hover {
-    background-color: #008df3;
+    background-color: #00CD66;
     border-color: transparent
 }
 
 .modal .modal-footer .angular-notification-btn-ok .badge {
-    color: #008df3;
+    color: #00CD66;
     background-color: #fff
 }
 
@@ -9122,7 +9122,7 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-cancel:hover {
 
 .modal .pop-form em.num {
     font-style: normal;
-    color: #008df3;
+    color: #00CD66;
     font-weight: 600;
     font-size: 16px
 }
@@ -9250,7 +9250,7 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-cancel:hover {
     font-weight: 600;
     letter-spacing: 2px;
     line-height: 38px;
-    border-bottom: solid 3px #008df3
+    border-bottom: solid 3px #00CD66
 }
 
 .dashboard .board-header h2:nth-child(2) {
@@ -9270,13 +9270,13 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-cancel:hover {
     width: 200px;
     padding: 6px 12px;
     border-radius: 3px;
-    border: 1px solid #008df3
+    border: 1px solid #00CD66
 }
 
 .dashboard .board-header .search-bar .btn-search {
     margin-bottom: 1px;
     color: #fff;
-    background-color: #008df3;
+    background-color: #00CD66;
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -9317,7 +9317,7 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-cancel:hover {
 
 .dashboard .table tbody>tr>td .btn:hover {
     padding: 5px;
-    border: 1px solid #008df3
+    border: 1px solid #00CD66
 }
 
 .dashboard .table tbody>tr>td .btn.btn-red {
@@ -9466,8 +9466,8 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-cancel:hover {
 }
 
 .dashboard .form-horizontal .avatar-area .upload-btn:hover {
-    color: #008df3;
-    border-color: #008df3
+    color: #00CD66;
+    border-color: #00CD66
 }
 
 .dashboard .form-horizontal .avatar-area .upload-info {
@@ -9699,7 +9699,7 @@ fieldset[disabled] .modal .modal-footer .angular-notification-btn-cancel:hover {
 .admin-modal .modal-footer .btn {
     width: 120px;
     color: #fff;
-    background-color: #008df3;
+    background-color: #00CD66;
     border-color: transparent
 }
 
