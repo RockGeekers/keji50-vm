@@ -6775,7 +6775,7 @@ body .error-wrapper:before {
 body .error-wrapper .error {
     border: 1px solid #fc4c24;
     background: #fff5f5;
-    padding: 15px 15px 15px 40px;
+    padding: 12px;
     border-radius: 4px
 }
 

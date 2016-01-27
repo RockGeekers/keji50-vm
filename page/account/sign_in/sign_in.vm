@@ -1,5 +1,5 @@
 #extends("/page/layout/front/front.vm")
-#require("./base.css")
+#require("../base.css")
 #block("content")
 <div class="index-bg">
 </div>
@@ -17,10 +17,10 @@
                 <div class="reg-entry">
                     <a class="ng-scope" href="$rc.getContextPath()/account/sign_up">注册新用户</a>
                 </div>
-                <div class="error-wrapper" style="display:none" id="J_errorwrap">
+                <div class="error-wrapper">
                     <i></i>
-                    <div class="error">
-                        <span class="error-msg"></span><!-- end ngIf: remoteError -->
+                    <div class="error" id="J_errorwrap" style="display:none">
+                        <span class="error-msg"></span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -46,7 +46,7 @@
 
 
 #script()
-    require(['./account']);
+    require(['./sign_in']);
 #end
 #require("./sign_in.vm")
 #end

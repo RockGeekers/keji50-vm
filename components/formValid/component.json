@@ -1,0 +1,6 @@
+{
+    "repos": "https://github.com/formValid/formValid.git",
+    "version": "1.9.1",
+    "name": "formValid",
+    "main": "formValid.js"
+}
