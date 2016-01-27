@@ -5,48 +5,40 @@
         <div class="row">
         	<div class="left-container col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 <div class="menu-layer">
-                    <div class="user-logo" style="background-image:url(https://krplus-pic.b0.upaiyun.com/201601/22143458/rak3m6t8ix1pbwex.jpg)" ui-sref="uc.account.basic" href="#/uc/account/basic">
+                    <div class="user-logo" style="background-image:url($rc.getContextPath()$loginUser.image)" ui-sref="uc.account.basic" href="$rc.getContextPath()/uc/home">
                         <span class="set-btn">
                             <i class="icon-h5-set"></i>
                         </span>
                     </div>
-                    <div class="user-name ng-binding" ng-bind="user.name">李超</div>
+                    <div class="user-name ng-binding" ng-bind="user.name">$loginUser.nickname</div>
                     <div class="user-position ng-binding" ng-bind="user.position"></div>
                     <div class="menu-group">
-                        <!--<a ui-sref="uc.account.basic" ui-sref-active-special="{'uc.account':'active'}">
-                            <i class="icon-h5-message"></i>我的账号
-                        </a>-->
-                        <!--<a ui-sref="" ui-sref-active="active" class="list-group-item">我的评论</a>-->
-                        <a ui-sref="uc.coinvest.all" ui-sref-active-special="{&#39;uc.coinvest&#39;:&#39;active&#39;}" ng-show="userRoles.coInvestor" ng-class="{&#39;active&#39;: orderActive}" class="ng-isolate-scope ng-hide" href="https://uc.36kr.com/#/uc/coinvest/all">
-                            <i class="icon-h5-order"></i>我的订单
-                        </a>
-                        <a ui-sref="uc.messages.inbox({type:&#39;followed&#39;})" ui-sref-active-special="{&#39;uc.messages&#39;:&#39;active&#39;}" class="ng-isolate-scope" href="https://uc.36kr.com/#/uc/message/inbox/followed/">
-                            <i class="icon-h5-message"></i>我的消息
-                        </a>
+                        
                         <!-- ngIf: articleLinkShow -->
-                        <a ui-sref="uc.favorite" ui-sref-active="active" href="https://uc.36kr.com/#/uc/favorite">
+                        <a ui-sref="uc.favorite" ui-sref-active="active" href="$rc.getContextPath()/uc/favorite">
                             <i class="icon-h5-focus"></i>我的收藏
                         </a>
-                        <a ui-sref="uc.mycompany" ui-sref-active="active" href="https://uc.36kr.com/#/uc/mycompany">
+                        <a ui-sref="uc.activity({type:&#39;followed&#39;})" ui-sref-active-special="{&#39;uc.activity&#39;:&#39;active&#39;}" class="ng-isolate-scope" href="$rc.getContextPath()/uc/activity">
+                            <i class="icon-h5-message"></i>我发布的活动
+                        </a>
+                        <a ui-sref="uc.mycompany" ui-sref-active="active" href="$rc.getContextPath()/uc/mycompany">
                             <i class="icon-h5-company"></i>我管理的公司
                         </a>
                         <!-- ngIf: userRoles.leadInvestor -->
-                        <a ui-sref="uc.follow" ui-sref-active="active" href="https://uc.36kr.com/#/uc/follow/">
+                        <a ui-sref="uc.follow" ui-sref-active="active" href="$rc.getContextPath()/uc/follow/">
                             <i class="icon-h5-follow"></i>我关注的公司
                         </a>
                     </div>
                 </div>
-                <a class="bottom-layer" ng-click="quit()">
+                <a id="J_signout_uc" class="bottom-layer" ng-click="quit()">
                     <i class="icon-h5-quit"></i>
-                    退出登录
+                                                                     退出登录
                 </a>
         	</div>
             <div class="right-container col-xs-10 col-sm-10 col-md-10 col-lg-10">
 				<div class="account-wrapper ng-scope">
 					<ul class="nav nav-tabs" role="tablist">
-						<li ui-sref-active="active" class="active"><a ui-sref="uc.account.basic" href="./uc_files/uc.html">账号信息</a></li>
-						<li ui-sref-active="active"><a ui-sref="uc.account.networks" href="https://uc.36kr.com/#/uc/account/networks">社交账号授权</a></li>
-   
+						<li ui-sref-active="active" class="active"><a ui-sref="uc.account.basic" href="$rc.getContextPath()/uc/home">账号信息</a></li>
 					</ul>
 					<div class="panel panel-default ng-isolate-scope loading-content-wrap loading-show loading-show-active" loading="loading.show">
 						<!-- uiView:  -->	
@@ -54,10 +46,10 @@
 							<div class="section basic">
 								<div class="info">
 									<div class="avatar" ng-click="avatarEdit()">
-										<img src="./uc_files/rak3m6t8ix1pbwex.jpg!70" alt="">
+										<img src="$rc.getContextPath()$loginUser.image" alt="">
 									</div>
 									<div class="name ng-binding">
-										leslie li
+										$loginUser.nickname
 									</div>
 								</div>
 								<div class="action">
@@ -70,12 +62,19 @@
 								<div class="prop-info">
 									<i></i>
 									<div class="desc" ng-class="{&#39;highlight&#39;:!formData.email}">
-										<h4>安全邮箱: <span class="ng-binding">les*****li@live.com</span> <!-- ngIf: formData.unconfirmed_email --></h4>
-										安全邮箱可以用于登录36氪账号，重置密码或其它安全验证
+										<h4>安全邮箱: 
+											<span class="ng-binding">
+											#if ($loginUser.email)
+												$loginUser.email
+											#else
+												未绑定
+											#end
+											</span>
+										</h4>
+										安全邮箱可以用于登录科技50账号，重置密码或其它安全验证
 									</div>
 								</div>
 								<div class="action">
-									<!-- ngIf: formData.unconfirmed_email -->
 									<a class="btn btn-primary" href="javascript:void(0)" ng-click="emailInfoEdit()">
 										修改
 									</a>
@@ -85,10 +84,17 @@
 							<div class="section">
 								<div class="prop-info">
 									<i></i>
-
 									<div class="desc" ng-class="{&#39;highlight&#39;:!formData.phone}">
-										<h4>安全手机: <span class="ng-binding">135****5413</span></h4>
-										安全手机可以用于登录36氪账号，重置密码或其它安全验证
+										<h4>安全手机: 
+											<span class="ng-binding">
+											#if ($loginUser.phone) 
+												$loginUser.phone
+											#else
+												未绑定
+											#end
+											</span>
+										</h4>
+										安全手机可以用于登录科技50账号，重置密码或其它安全验证
 									</div>
 								</div>
 								<div class="action">
@@ -115,11 +121,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="loading-wrap ng-scope ng-hide" ng-show="flag"><div class="la-ball-scale-multiple la-2x">            
-					<div></div>            
-					<div></div>            
-					<div></div>            
 				</div>
 			</div>
 		</div>

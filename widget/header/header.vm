@@ -11,9 +11,10 @@
             <a href="/web?command=MadeHelp">关于我们</a>
         </div>
         <div class="topLink_2 fr">
+        	<a href="/web?command=Release_pro" class="ico-edit">发布项目</a>
             #if( $loginUser )
                 <div id="J_logined">
-                    <a href="javascript:;" id="loginUser" class="ico-user">$loginUser.getNickname()</a>  
+                    <a href="$rc.getContextPath()/uc/home" id="loginUser" class="ico-user">$loginUser.getNickname()</a>  
                     <a href="javascript:;" id="J_signout">退出</a> 
                 </div>
             #else
@@ -22,7 +23,6 @@
                     <a href="$rc.getContextPath()/account/sign_up" #if($index == 'sign_up')class="selected"#end >注册</a>
                 </div>
             #end
-            <a href="/web?command=Release_pro" class="ico-edit">发布项目</a>
         </div>
     </div>
 </div>
