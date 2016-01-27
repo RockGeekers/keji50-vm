@@ -1,0 +1,59 @@
+#extends("/page/layout/front/front.vm")
+#require("../base.css")
+#block("content")
+<div ui-view="" class="ng-scope">
+    <div class="form common-form common-wide-form ng-scope" ng-class="{'success-pages-guide': regType=='success'}">
+        <legend>
+            <h2 ng-if="bindType!='bind'" class="ng-scope">重置密码</h2>
+            <!-- end ngIf: bindType!='bind' -->
+        </legend>
+        <div class="error-wrapper">
+            <i></i>
+            <div class="error" id="J_errorwrap" style="display:none">
+                <span class="error-msg"></span>
+            </div>
+        </div>
+        <div class="forget-form ng-scope">
+            <form action="" method="post" role="form" id="forgetForm" name="forgetForm" class="form common-form" autocomplete="off">
+	            <div class="form-group">
+	                <label class="normal-label">请输入你的手机号/邮箱</label>
+	
+	                <div class="wrapicon">
+	                    <label class="icon-person"></label>
+	                    <input type="text" class="form-control" name="username" id="username" placeholder="手机号/邮箱" required="">
+	                </div>
+	            </div>
+        
+        		<div class="form-group">
+                    <label class="icon-eye"></label>
+                    <div class="actions col-actions ng-scope">
+                        <a id="J_sendsms" class="icon-envelop btn" title="短信/邮件"></a>
+                    </div>
+                    <div class="col-input">
+                    	<input type="hidden"  name="verifyId"  id="verifyId">
+                        <input type="text" class="form-control" name="verifyCode" id="" placeholder="验证码" required="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="icon-lock"></label>
+                    <input type="password" minlength="6" maxlength="16" class="form-control" name="password" required="" placeholder="新密码">
+                </div>
+                
+                <button type="button" id="J_reset" class="btn btn-primary">重置密码</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+#end## end of body
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+
+
+#script()
+	require(['./sign_forget']);
+    require(['../account']);
+#end
+#require("./sign_forget.vm")
+#end

@@ -10,37 +10,34 @@
         <div class="bind-entry ng-scope" ng-if="bindType!='bind' &amp;&amp; regType!='success'">
             <a ui-sref="index.login()" href="$rc.getContextPath()/account/sign_in">使用已有账号登录</a>
         </div>
-        <div class="error-wrapper" style="display:none" id="J_errorwrap">
+        <div class="error-wrapper">
             <i></i>
-            <div class="error">
+            <div class="error" id="J_errorwrap" style="display:none">
                 <span class="error-msg"></span>
             </div>
         </div>
         <div class="phone ng-scope">
-            <form action="" method="post" role="form" id="regForm" name="regForm" class="ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-dirty ng-valid-parse ng-valid-compare-to">
+            <form action="" method="post" role="form" id="regForm" name="regForm" class="form common-form" autocomplete="off">
                 <div class="form-group">
                     <label class="icon-phone"></label>
-                    <input type="tel" class="form-control ng-valid-pattern ng-dirty ng-valid-parse ng-invalid ng-invalid-required ng-touched" name="username" id="username" placeholder="手机号" required="" ng-pattern="/^\d+$/">
-s                </div>
-                <div class="form-group">
-                    <label class="icon-lock"></label>
-                    <input type="password" minlength="6" maxlength="16" class="form-control ng-untouched ng-valid-minlength ng-valid-maxlength ng-dirty ng-valid-parse ng-invalid ng-invalid-required" name="password" ng-model="formData.password" required="" placeholder="密码">
-                    <div class="error ng-scope">
-                        <span class="ng-scope">密码长度6-16位，支持数字、字母、字符</span>
-                    </div>
+                    <input type="tel" class="form-control" name="username" id="username" placeholder="手机号" required="">
                 </div>
                 <div class="form-group">
                     <label class="icon-lock"></label>
-                    <input type="password" class="form-control ng-pristine ng-untouched ng-isolate-scope ng-valid ng-valid-compare-to" name="passwordConfirm" ng-model="formData.passwordConfirm" compare-to="formData.password" placeholder="确认密码">
+                    <input type="password" minlength="6" maxlength="16" class="form-control" name="password" id="password" required="" placeholder="密码">
+                </div>
+                <div class="form-group">
+                    <label class="icon-lock"></label>
+                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="确认密码">
                 </div>
                 <div class="form-group">
                     <label class="icon-eye"></label>
-                    <div class="actions col-actions ng-scope" ng-if="countLeft<=0 || !countLeft">
-                        <a id="J_sendsms" class="icon-envelop btn" title="短信" ng-disabled="RegisterForm.username.$invalid" ng-click="RegisterForm.username.$invalid || sendSMS()"></a>
+                    <div class="actions col-actions ng-scope">
+                        <a id="J_sendsms" class="icon-envelop btn" title="短信"></a>
                     </div>
                     <div class="col-input">
                     	<input type="hidden"  name="verifyId"  id="verifyId">
-                        <input type="text" class="form-control col-9 ng-pristine ng-invalid ng-invalid-required ng-touched" name="verifyCode" ng-model="formData.verifyCode" id="" placeholder="验证码" required="">
+                        <input type="text" class="form-control" name="verifyCode" id="verifyCode" placeholder="验证码" required="">
                     </div>
                 </div>
                 <button type="button" id="J_signup" class="btn btn-primary">注册账号</button>
@@ -52,6 +49,7 @@ s                </div>
 #end## end of body
 #script()
     require(['./sign_up']);
+    require(['../account']);
 #end
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
 

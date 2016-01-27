@@ -8,7 +8,7 @@ var formValid = new FormValid({
 	rules: {
 		username : [{
 			rule : function(value){
-				return value == '';
+				return value != '';
 			},
 			errorText : '请输入用户名'
 		},{
@@ -19,7 +19,7 @@ var formValid = new FormValid({
 		}],
 		password : {
 			rule : function(value){
-				return value == '';
+				return value != '';
 			},
 			errorText : '请输入密码'
 		}
@@ -30,7 +30,7 @@ $('#J_signin').click(function(){
 	if(!formValid.check()) return;
 	$.post('/account/ajax/sign_in', $('#loginForm').serialize(), function(data) {
 		if(data.code == 0){
-			location.href = '/'
+			location.href = '/uc/home'
 		}else{
 			$('#J_errorwrap').show().find('.error-msg').text(data.message);
 		}
