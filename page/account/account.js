@@ -3,7 +3,7 @@ $('#J_signin').click(function(){
 	$('#J_errorwrap').hide();
 	$.post('/account/ajax/sign_in', $('#loginForm').serialize(), function(data) {
 		if(data.code == 0){
-			location.href = '/'
+			location.href = '/uc/home'
 		}else{
 			$('#J_errorwrap').show().find('.error-msg').text(data.message);
 		}
@@ -14,7 +14,7 @@ $("#J_signup").click(function() {
 	$('#J_errorwrap').hide();
 	$.post('/account/ajax/sign_up', $('#regForm').serialize(), function(data) {
 		if(data.code == 0){
-			location.href = '/'
+			location.href = '/uc/home'
 		}else{
 			$('#J_errorwrap').show().find('.error-msg').text(data.message);
 		}
@@ -32,7 +32,7 @@ $("#J_reset").click(function() {
 	});
 	return false;
 });
-$('#J_signout').click(function(){
+$('#J_signout, #J_signout_uc').click(function(){
 	$.post('/account/ajax/sign_out', function(data) {
 		if(data.code == 0){
 			location.href = '/'
