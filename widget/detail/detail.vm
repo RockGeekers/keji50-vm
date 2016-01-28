@@ -33,6 +33,7 @@
                 <section class="single-post-share" data-stat-module="Wenzhang">
                     <ul class="actions">
                         <li><a class="comment-btn J_addCommentBtn" data-post-id="5040832" data-stat-click="pinglunshuliang.click" href="javascript:void(0)"><i class="icon icon-comment"></i><span id="commentTotalCount" class="comment_total_count">0</span></a></li>
+                        <li><a data-post-id="5040833" data-stat-click="renqishuliang.click" href="javascript:void(0)"><p></p><span id="hotCountTotalCount" class="hot_total_count">0</span></a></li>
                     </ul>
                     <div class="single-post-share-list hide-external"><span class="mobile-hide">分享到</span>
                         <div class="share-group">

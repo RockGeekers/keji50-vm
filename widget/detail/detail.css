@@ -558,6 +558,19 @@ article.single-post section.single-post-share ul.actions li a i {
     position: relative
 }
 
+article.single-post section.single-post-share ul.actions li a p {
+    width: 30px;
+    height: 30px;
+    background: url('/static/images/hot.png') center center no-repeat;
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 17px;
+    position: relative
+}
+
 article.single-post section.single-post-share ul.actions li a i:nth-of-type(2) {
     position: absolute;
     top: 0;
