@@ -1,0 +1,132 @@
+#extends("/page/layout/front/front.vm")
+#require("./activity.css")
+#block("content")
+<div id="main" class="main com-width clearfix">
+	    <div class="block">
+	    	<div class="block-hd clearfix">
+	    		<span class="block-tit"><a href="http://www.cyzone.cn/category/758/">榜单活动</a></span>
+	    	</div>
+	    	<div class="block-bd clearfix">
+	    		 <div class="block-item ">
+	    			<div class="item-img-box">
+	    			<a href="http://www.cyzone.cn/2015woman/" target="_blank" alt="2016“值得关注的女性创业者”评选" title="2016“值得关注的女性创业者”评选">
+	    				<img src="http://7xjsga.com2.z0.glb.qiniucdn.com/uploadfile/2015/1222/20151222043514869.jpg?imageView2/1/q/90/w/360/h/216" alt="" style="width: 348px; height: 208.8px;"></a>
+	    			</div>
+	    			<div class="item-info">
+	    				<h4 class="item-info-tit"><a href="http://www.cyzone.cn/2015woman/" target="_blank" alt="2016“值得关注的女性创业者”评选" title="2016“值得关注的女性创业者”评选">2016“值得关注的女性创业者”评选</a></h4>
+	    				<p class="item-info-txt">她们，有想法、有见地、善于把握趋势！寻找本年度的创业女神！</p>
+	    				<div class="bottom">
+	                        <span class="address">
+	                        	<span class="ng-binding">北京</span>
+	                        </span>
+	                        <span class="times">
+	                            <span class="ng-binding">12月16日-12月16日</span>
+	                        </span>
+                    	</div>
+	    			</div>
+	    		</div>
+	    		<div class="block-item ">
+	    			<div class="item-img-box">
+	    			<a href="http://www.cyzone.cn/features/30under/" target="_blank" alt="2016“30岁以下创业新贵”评选" title="2016“30岁以下创业新贵”评选">
+	    				<img src="http://7xjsga.com2.z0.glb.qiniucdn.com/uploadfile/2015/1222/20151222043309295.jpg?imageView2/1/q/90/w/360/h/216" alt="" style="width: 348px; height: 208.8px;"></a>
+	    			</div>
+	    			<div class="item-info">
+	    				<h4 class="item-info-tit"><a href="http://www.cyzone.cn/features/30under/" target="_blank" alt="2016“30岁以下创业新贵”评选" title="2016“30岁以下创业新贵”评选">2016“30岁以下创业新贵”评选</a></h4>
+	    				<p class="item-info-txt">30位30岁以下创业新贵，最具折腾精神的年轻创业者。</p>
+	    				<div class="bottom">
+	                        <span class="address">
+	                        	<span class="ng-binding">北京</span>
+	                        </span>
+	                        <span class="times">
+	                            <span class="ng-binding">12月16日-12月16日</span>
+	                        </span>
+                    	</div>
+	    			</div>
+	    		</div>
+	    		<div class="block-item line-end">
+	    			<div class="item-img-box">
+	    			<a href="http://www.cyzone.cn/features/nvshen2015/" target="_blank" alt="创业邦“值得关注的女性创业者”" title="创业邦“值得关注的女性创业者”">
+	    				<img src="http://7xjsga.com2.z0.glb.qiniucdn.com/uploadfile/2015/0603/20150603060122961.jpg?imageView2/1/q/90/w/360/h/216" alt="" style="width: 348px; height: 208.8px;"></a>
+	    			</div>
+	    			<div class="item-info">
+	    				<h4 class="item-info-tit"><a href="http://www.cyzone.cn/features/nvshen2015/" target="_blank" alt="创业邦“值得关注的女性创业者”" title="创业邦“值得关注的女性创业者”">创业邦“值得关注的女性创业者”</a></h4>
+	    				<p class="item-info-txt">创业邦“值得关注的女性创业者”，寻找本年度的创业女神！她们，有想法、有见地、善于把握趋势...</p>
+	    				<div class="bottom">
+	                        <span class="address">
+	                        	<span class="ng-binding">北京</span>
+	                        </span>
+	                        <span class="times">
+	                            <span class="ng-binding">12月16日-12月16日</span>
+	                        </span>
+                    	</div>
+	    			</div>
+	    		</div>
+	    		<div class="block-item ">
+	    			<div class="item-img-box">
+	    			<a href="http://www.cyzone.cn/class2015/" target="_blank" alt="评选30岁以下创业新贵" title="评选30岁以下创业新贵">
+	    				<img src="http://7xjsga.com2.z0.glb.qiniucdn.com/uploadfile/2015/0603/20150603060257474.jpg?imageView2/1/q/90/w/360/h/216" alt="" style="width: 348px; height: 208.8px;"></a>
+	    			</div>
+	    			<div class="item-info">
+	    				<h4 class="item-info-tit"><a href="http://www.cyzone.cn/class2015/" target="_blank" alt="评选30岁以下创业新贵" title="评选30岁以下创业新贵">评选30岁以下创业新贵</a></h4>
+	    				<p class="item-info-txt">这个时代，每天都有传奇诞生;每个人都怀揣自己独一无二的梦想与才华，站在创业的风口浪尖。</p>
+	    				<div class="bottom">
+	                        <span class="address">
+	                        	<span class="ng-binding">北京</span>
+	                        </span>
+	                        <span class="times">
+	                            <span class="ng-binding">12月16日-12月16日</span>
+	                        </span>
+                    	</div>
+	    			</div>
+	    		</div>
+	    		<div class="block-item ">
+	    			<div class="item-img-box">
+	    			<a href="http://www.cyzone.cn/hot100/2013/liucheng.html" target="_blank" alt="2013中国年度创新成长企业100强评选" title="2013中国年度创新成长企业100强评选">
+	    				<img src="http://7xjsga.com2.z0.glb.qiniucdn.com/uploadfile/2015/0401/20150401045328126.jpg?imageView2/1/q/90/w/360/h/216" alt="" style="width: 348px; height: 208.8px;"></a>
+	    			</div>
+	    			<div class="item-info">
+	    				<h4 class="item-info-tit"><a href="http://www.cyzone.cn/hot100/2013/liucheng.html" target="_blank" alt="2013中国年度创新成长企业100强评选" title="2013中国年度创新成长企业100强评选">2013中国年度创新成长企业100强评选</a></h4>
+	    				<p class="item-info-txt">根据行业划分，每一位专家评委将会收到其中一个行业的候选企业报名表，并对这些企业打分和提供...</p>
+	    				<div class="bottom">
+	                        <span class="address">
+	                        	<span class="ng-binding">北京</span>
+	                        </span>
+	                        <span class="times">
+	                            <span class="ng-binding">12月16日-12月16日</span>
+	                        </span>
+                    	</div>
+	    			</div>
+	    		</div>
+	    		<div class="block-item line-end">
+	    			<div class="item-img-box">
+	    			<a href="http://www.cyzone.cn/features/20120229/" target="_blank" alt="2012年的创业新贵开始接班?" title="2012年的创业新贵开始接班?">
+	    				<img src="http://7xjsga.com2.z0.glb.qiniucdn.com/uploadfile/2015/0603/20150603060644682.jpg?imageView2/1/q/90/w/360/h/216" alt="" style="width: 348px; height: 208.8px;"></a>
+	    			</div>
+	    			<div class="item-info">
+	    				<h4 class="item-info-tit"><a href="http://www.cyzone.cn/features/20120229/" target="_blank" alt="2012年的创业新贵开始接班?" title="2012年的创业新贵开始接班?">2012年的创业新贵开始接班?</a></h4>
+	    				<p class="item-info-txt">他们将是马化腾、马云的取代者？19岁他做出暴风影音，21岁卖给冯鑫，如今做云计算。21岁他辍学...</p>
+	    				<div class="bottom">
+	                        <span class="address">
+	                        	<span class="ng-binding">北京</span>
+	                        </span>
+	                        <span class="times">
+	                            <span class="ng-binding">12月16日-12月16日</span>
+	                        </span>
+                    	</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<a class="load-more"  href="javascript:;" id="activity_flows_next_link">加载更多</a>    
+	    </div>
+
+</div>
+#end## end of body
+
+## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。
+
+
+#script()
+    require(['./activity']);
+#end
+#require("./activity_list.vm")
+#end
