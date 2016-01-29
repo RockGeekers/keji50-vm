@@ -1,0 +1,160 @@
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ".";
+	clear: both;
+	height: 0
+}
+
+.clearfix {
+	*zoom: 1
+}
+
+.clearfix {
+	display: inline-block
+}
+
+* html .clearfix {
+	height: 1%
+}
+
+.clearfix {
+	display: block
+}
+
+.com-width {
+	width: 1170px;
+	margin: 0 auto
+}
+
+.block {
+	margin: 42px auto;
+	background: #fff;
+	padding: 20px;
+	-webkit-box-shadow: 1px 1px 1px #e7e7e7;
+	-moz-box-shadow: 1px 1px 1px #e7e7e7;
+	-ms-box-shadow: 1px 1px 1px #e7e7e7;
+	-o-box-shadow: 1px 1px 1px #e7e7e7;
+	box-shadow: 1px 1px 1px #e7e7e7;
+	border-top: 2px solid #00CD66
+}
+
+.block .load-more {
+	border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #cdd8e3;
+    display: block;
+    box-shadow: none;
+    color: #6483a2
+}
+
+.block-hd .block-tit {
+	display: inline-block;
+	padding-right: 18px;
+	line-height: 36px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #565656
+}
+
+.block-hd .block-tit a {
+	color: #565656
+}
+
+.block-hd .block-desc {
+	display: inline-block;
+	padding-left: 10px;
+	line-height: 34px;
+	color: #c7c7c7;
+	font-size: 18px
+}
+
+.block-hd .block-more {
+	display: inline-block;
+	float: right;
+	font-size: 14px;
+	width: 40px;
+	line-height: 34px;
+	text-align: center;
+	cursor: pointer
+}
+
+.block-hd .block-more a {
+	color: #565656
+}
+
+.block-hd .block-more a:hover {
+	color: #00CD66
+}
+
+.block-bd .block-item {
+	max-width: 30%;
+	overflow: hidden;
+	float: left;
+	margin: 35px 5% 0 0
+}
+
+.block-bd .block-item:hover .item-info {
+	border-bottom: 2px solid #00CD66
+}
+
+.block-bd .block-item.line-end {
+	margin-right: 0
+}
+
+.block-bd .item-img-box {
+	background: #fafafa
+}
+
+.block-bd .item-img-box img {
+	width: 100%;
+	display: block
+}
+
+.block-bd .item-info {
+	padding: 20px 10px 30px;
+	background: #fafafa;
+	border-bottom: 2px solid #fafafa
+}
+
+.block-bd .item-info .bottom {
+	padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #eee;
+    background: #f3f7fb;
+}
+
+.block-bd .item-info .bottom .address {
+	width: 42%;
+	float:left;
+}
+
+.block-bd .item-info .bottom .times {
+	color: #999;
+	float:right;
+}
+
+.block-bd .item-info .item-info-tit {
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	overflow: hidden
+}
+
+.block-bd .item-info .item-info-tit a {
+	color: #565656
+}
+
+.block-bd .item-info .item-info-txt {
+	font-size: 14px;
+	color: #afafaf;
+	line-height: 24px;
+	height: 48px;
+	overflow: hidden
+}
