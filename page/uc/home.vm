@@ -2,131 +2,129 @@
 #require("../account/base.css")
 #block("content")
 <div class="container">
-        <div class="row">
-        	<div class="left-container col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                <div class="menu-layer">
-                    <div class="user-logo" style="background-image:url($rc.getContextPath()$loginUser.image)" ui-sref="uc.account.basic" href="$rc.getContextPath()/uc/home">
-                        <span class="set-btn">
-                            <i class="icon-h5-set"></i>
-                        </span>
-                    </div>
-                    <div class="user-name ng-binding" ng-bind="user.name">$loginUser.nickname</div>
-                    <div class="user-position ng-binding" ng-bind="user.position"></div>
-                    <div class="menu-group">
-                        
-                        <!-- ngIf: articleLinkShow -->
-                        <a ui-sref="uc.favorite" ui-sref-active="active" href="$rc.getContextPath()/uc/favorite">
-                            <i class="icon-h5-focus"></i>我的收藏
-                        </a>
-                        <a ui-sref="uc.activity({type:&#39;followed&#39;})" ui-sref-active-special="{&#39;uc.activity&#39;:&#39;active&#39;}" class="ng-isolate-scope" href="$rc.getContextPath()/uc/activity">
-                            <i class="icon-h5-message"></i>我发布的活动
-                        </a>
-                        <a ui-sref="uc.mycompany" ui-sref-active="active" href="$rc.getContextPath()/uc/mycompany">
-                            <i class="icon-h5-company"></i>我管理的公司
-                        </a>
-                        <!-- ngIf: userRoles.leadInvestor -->
-                        <a ui-sref="uc.follow" ui-sref-active="active" href="$rc.getContextPath()/uc/follow/">
-                            <i class="icon-h5-follow"></i>我关注的公司
-                        </a>
-                    </div>
+    <div class="row">
+    	<div class="left-container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="menu-layer">
+                <div class="user-logo" style="background-image:url($rc.getContextPath()$loginUser.image)" ui-sref="uc.account.basic" href="$rc.getContextPath()/uc/home">
+                    <span class="set-btn">
+                        <i class="icon-h5-set"></i>
+                    </span>
                 </div>
-                <a id="J_signout_uc" class="bottom-layer" ng-click="quit()">
-                    <i class="icon-h5-quit"></i>
-                                                                     退出登录
-                </a>
-        	</div>
-            <div class="right-container col-xs-10 col-sm-10 col-md-10 col-lg-10">
-				<div class="account-wrapper ng-scope">
-					<ul class="nav nav-tabs" role="tablist">
-						<li ui-sref-active="active" class="active"><a ui-sref="uc.account.basic" href="$rc.getContextPath()/uc/home">账号信息</a></li>
-					</ul>
-					<div class="panel panel-default ng-isolate-scope loading-content-wrap loading-show loading-show-active" loading="loading.show">
-						<!-- uiView:  -->	
-						<div class="panel-body ng-scope" ui-view=""><div class="account-basic-wrapper ng-scope">
-							<div class="section basic">
-								<div class="info">
-									<div class="avatar" ng-click="avatarEdit()">
-										<img src="$rc.getContextPath()$loginUser.image" alt="">
-									</div>
-									<div class="name ng-binding">
-										$loginUser.nickname
-									</div>
+                <div class="user-name ng-binding" ng-bind="user.name">$loginUser.nickname</div>
+                <div class="user-position ng-binding" ng-bind="user.position"></div>
+                <div class="menu-group">
+                    
+                    <!-- ngIf: articleLinkShow -->
+                    <a ui-sref="uc.favorite" ui-sref-active="active" href="$rc.getContextPath()/uc/favorite">
+                        <i class="icon-h5-focus"></i>我的收藏
+                    </a>
+                    <a ui-sref="uc.activity({type:&#39;followed&#39;})" ui-sref-active-special="{&#39;uc.activity&#39;:&#39;active&#39;}" class="ng-isolate-scope" href="$rc.getContextPath()/uc/activity">
+                        <i class="icon-h5-message"></i>我发布的活动
+                    </a>
+                    <a ui-sref="uc.mycompany" ui-sref-active="active" href="$rc.getContextPath()/uc/mycompany">
+                        <i class="icon-h5-company"></i>我管理的公司
+                    </a>
+                    <!-- ngIf: userRoles.leadInvestor -->
+                    <a ui-sref="uc.follow" ui-sref-active="active" href="$rc.getContextPath()/uc/follow/">
+                        <i class="icon-h5-follow"></i>我关注的公司
+                    </a>
+                </div>
+            </div>
+            <a id="J_signout_uc" class="bottom-layer" ng-click="quit()">
+                <i class="icon-h5-quit"></i>
+                                                                 退出登录
+            </a>
+    	</div>
+        <div class="right-container col-xs-10 col-sm-10 col-md-10 col-lg-10">
+			<div class="account-wrapper ng-scope">
+				<ul class="nav nav-tabs" role="tablist">
+					<li ui-sref-active="active" class="active"><a ui-sref="uc.account.basic" href="$rc.getContextPath()/uc/home">账号信息</a></li>
+				</ul>
+				<div class="panel panel-default ng-isolate-scope loading-content-wrap loading-show loading-show-active" loading="loading.show">
+					<!-- uiView:  -->	
+					<div class="panel-body ng-scope" ui-view=""><div class="account-basic-wrapper ng-scope">
+						<div class="section basic">
+							<div class="info">
+								<div class="avatar" ng-click="avatarEdit()">
+									<img src="$rc.getContextPath()$loginUser.image" alt="">
 								</div>
-								<div class="action">
-									<a class="btn btn-primary" href="javascript:void(0)" ng-click="basicInfoEdit()">
-										修改
-									</a>
-								</div>
-							</div>
-							<div class="section">
-								<div class="prop-info">
-									<i></i>
-									<div class="desc" ng-class="{&#39;highlight&#39;:!formData.email}">
-										<h4>安全邮箱: 
-											<span class="ng-binding">
-											#if ($loginUser.email)
-												$loginUser.email
-											#else
-												未绑定
-											#end
-											</span>
-										</h4>
-										安全邮箱可以用于登录科技50账号，重置密码或其它安全验证
-									</div>
-								</div>
-								<div class="action">
-									<a class="btn btn-primary" href="javascript:void(0)" ng-click="emailInfoEdit()">
-										修改
-									</a>
+								<div class="name ng-binding">
+									$loginUser.nickname
 								</div>
 							</div>
-
-							<div class="section">
-								<div class="prop-info">
-									<i></i>
-									<div class="desc" ng-class="{&#39;highlight&#39;:!formData.phone}">
-										<h4>安全手机: 
-											<span class="ng-binding">
-											#if ($loginUser.phone) 
-												$loginUser.phone
-											#else
-												未绑定
-											#end
-											</span>
-										</h4>
-										安全手机可以用于登录科技50账号，重置密码或其它安全验证
-									</div>
-								</div>
-								<div class="action">
-									<a class="btn btn-primary" href="javascript:void(0)" ng-click="phoneInfoEdit()">
-										修改
-									</a>
+							<div class="action">
+								<a class="btn btn-primary" href="javascript:void(0)" ng-click="basicInfoEdit()">
+									修改
+								</a>
+							</div>
+						</div>
+						<div class="section">
+							<div class="prop-info">
+								<i></i>
+								<div class="desc" ng-class="{&#39;highlight&#39;:!formData.email}">
+									<h4>安全邮箱: 
+										<span class="ng-binding">
+										#if ($loginUser.email)
+											$loginUser.email
+										#else
+											未绑定
+										#end
+										</span>
+									</h4>
+									安全邮箱可以用于登录科技50账号，重置密码或其它安全验证
 								</div>
 							</div>
+							<div class="action">
+								<a class="btn btn-primary" href="javascript:void(0)" ng-click="emailInfoEdit()">
+									修改
+								</a>
+							</div>
+						</div>
 
-							<div class="section">
-								<div class="prop-info">
-									<i></i>
+						<div class="section">
+							<div class="prop-info">
+								<i></i>
+								<div class="desc" ng-class="{&#39;highlight&#39;:!formData.phone}">
+									<h4>安全手机: 
+										<span class="ng-binding">
+										#if ($loginUser.phone) 
+											$loginUser.phone
+										#else
+											未绑定
+										#end
+										</span>
+									</h4>
+									安全手机可以用于登录科技50账号，重置密码或其它安全验证
+								</div>
+							</div>
+							<div class="action">
+								<a class="btn btn-primary" href="javascript:void(0)" ng-click="phoneInfoEdit()">
+									修改
+								</a>
+							</div>
+						</div>
 
-									<div class="desc highlight" ng-class="{&#39;highlight&#39;:!formData.has_password}">
-										<h4>账号密码</h4>
-										用于保护账号信息和登录安全
-									</div>
+						<div class="section">
+							<div class="prop-info">
+								<i></i>
+
+								<div class="desc highlight" ng-class="{&#39;highlight&#39;:!formData.has_password}">
+									<h4>账号密码</h4>
+									用于保护账号信息和登录安全
 								</div>
-								<div class="action">
-									<a class="btn btn-primary" href="javascript:void(0)" ng-click="passwordInfoEdit()">
-										修改
-									</a>
-								</div>
+							</div>
+							<div class="action">
+								<a class="btn btn-primary" href="javascript:void(0)" ng-click="passwordInfoEdit()">
+									修改
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-            </div>
-        </div>
-    </div>
+	</div>
+</div>
 #end## end of body
 
 ## 需要依赖一下自己，否则该 vm 中依赖没法自动加载进来。

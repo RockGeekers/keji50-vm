@@ -1,0 +1,6 @@
+{
+    "repos": "https://github.com/dialog/dialog.git",
+    "version": "1.9.1",
+    "name": "dialog",
+    "main": "dialog.js"
+}
